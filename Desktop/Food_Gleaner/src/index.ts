@@ -331,7 +331,7 @@ app.delete("/Restaurant/:res_id",async (req,resp)=>{
 })
 
 
-app.listen(5000, () => console.log("App is Listening on PORT ",5000));
+app.listen(process.env.PORT || 5000, () => console.log("App is Listening on PORT ",5000));
 
 //typeorm function that creates a connection
 createConnection().then(async connection => {}).catch(error => console.log(error));
